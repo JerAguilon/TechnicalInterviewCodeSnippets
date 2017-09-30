@@ -10,9 +10,7 @@ def solution(string, charSet):
     charactersEncountered = 0;
     bestScore = float('inf')
     while (left < len(string) and right < len(string)):
-        letterMap[string[right]] =  \
-            letterMap[string[right]] + 1 \
-            if string[right] in letterMap else 1
+        letterMap[string[right]] =  letterMap.get(string[right], 0) + 1
         if letterMap[string[right]] == 1 and string[right] in charSet:
             charactersEncountered += 1
         right += 1
