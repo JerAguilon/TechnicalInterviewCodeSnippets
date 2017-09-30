@@ -17,8 +17,10 @@ def solution(string, charSet):
             charactersEncountered += 1
         right += 1
         # we've encountered every letter, let's minimize!
-        if (charactersEncountered == 3):
-            while (charactersEncountered == 3):
+        if (charactersEncountered == len(charSet)):
+            # make the string 'invalid' again, and update 
+            # bestScorebefore continuing
+            while (charactersEncountered == len(charSet)):
                 letterMap[string[left]] -= 1
                 if letterMap[string[left]] == 0 and string[left] in charSet:
                     charactersEncountered -= 1
