@@ -36,7 +36,7 @@ def countInversions(arr):
         i += 1
     return total
 import random
-arr = [1,1,1,2,2]
+arr = [random.randint(0, 100) for i in range(100)]
 print(solution(arr))
 print(arr)
 
