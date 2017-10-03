@@ -2,7 +2,7 @@ def solution(arr):
     return countInversions(arr)
 
 def countInversions(arr):
-    # base case
+
     if len(arr) == 0 or len(arr) == 1:
         return 0
 
