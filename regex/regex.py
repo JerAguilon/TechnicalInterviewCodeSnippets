@@ -5,7 +5,7 @@ def solution(string, pattern):
         solution[0][i] = True
 
     for i in range(1, len(pattern)+1):
-        # as long as pattern is the empty string, let it matches
+        # as long as pattern is the empty string, let it match
         solution[i][0] = solution[i-1][0] if pattern[i-1] == '*' else False
     for i in range(1, len(pattern)  + 1):
         for j in range(1, len(string) + 1):
