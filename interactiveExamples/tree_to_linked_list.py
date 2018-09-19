@@ -8,5 +8,35 @@ class Node(object):
         self.left = left
         self.right = right
 
+    def __str__(self):
+        return self.val
+
 def solution(root):
-    pass
+    if root is None:
+        return root
+    if root.left is None and root.right is None:
+        return root
+
+    stack = []
+    stack.append(root)
+
+    head = root
+    tail = None
+
+    while len(stack) > 0:
+        curr = stack.pop()
+
+        if curr.left is not None:
+            stack.append(curr.left)
+        if curr.right is not None:
+            stack.append(curr.right)
+
+        if tail is None:
+            tail = curr
+            tail.left = None
+        else:
+            tail.right = curr
+            curr.left = tail
+            tail = curr
+            tail.right = None
+    return head
