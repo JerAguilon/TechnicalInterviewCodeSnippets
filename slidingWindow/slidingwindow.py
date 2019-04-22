@@ -1,9 +1,4 @@
 def solution(string, charSet):
-    if len(string) == 0:
-        return 0
-    if len(charSet) == 0:
-        return 0
-
     left = 0;
     right = 0;
     letterMap = {}
