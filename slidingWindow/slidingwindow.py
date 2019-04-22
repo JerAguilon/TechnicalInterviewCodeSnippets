@@ -10,18 +10,22 @@ def solution(string, charSet):
     charactersEncountered = 0;
     bestScore = float('inf')
     while right < len(string):
-        letterMap[string[right]] =  letterMap.get(string[right], 0) + 1
-        if letterMap[string[right]] == 1 and string[right] in charSet:
-            charactersEncountered += 1
+        curr_right = string[right]
+        if curr_right in charSet:
+            letterMap[curr_right] =  letterMap.get(curr_right, 0) + 1
+            if letterMap[string[right]] == 1:
+                charactersEncountered += 1
         right += 1
         # we've encountered every letter, let's minimize!
         if (charactersEncountered == len(charSet)):
             # make the string 'invalid' again, and update
             # bestScorebefore continuing
             while (charactersEncountered == len(charSet)):
-                letterMap[string[left]] -= 1
-                if letterMap[string[left]] == 0 and string[left] in charSet:
-                    charactersEncountered -= 1
+                curr_left = string[left]
+                if curr_left in charSet:
+                    letterMap[curr_left] -= 1
+                    if letterMap[curr_left] == 0:
+                        charactersEncountered -= 1
                 left += 1
             bestScore = min(bestScore, right - left + 1)
     return bestScore
