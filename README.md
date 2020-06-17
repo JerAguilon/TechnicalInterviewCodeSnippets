@@ -3,8 +3,6 @@ Code snippets to go along with an on-campus technical interview presentation I m
 
 [Presentation here](https://jeremyaguilon.me/blog/visualizing_four_key_interview_algorithms)
 
-# Want help?
+# Found a bug?
 
-Want personal coaching on how to ace the interviews that got me job offers at Google, Facebook, Two Sigma, and more?
-Shoot me an email at jeremyaguilon1@gmail.com to connect. I offer both mock interviews and general coaching with discounts for students.
-
+You are likely correct! These snippets were hastily made. Feel free to make a pull request.
